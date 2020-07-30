@@ -11,7 +11,7 @@ interface Props {
     date: string;
     title: string;
     id: string;
-  };
+  }[];
 }
 
 export default function Home({ allPostsData }: Props) {
