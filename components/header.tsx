@@ -25,21 +25,31 @@ const Header = (): JSX.Element => {
     
     const navList = navLinks.map((navLink) => {
         return (
-            <a href={navLink.href} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-            {navLink.label}
-          </a>
+        <Link href={navLink.href}>
+            <a  className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4" aria-label={navLink.label}>
+                {navLink.label}
+            </a>
+        </Link>
             )      
 })
 
     return (
         <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
             <div className='flex items-center flex-shrink-0 text-white mr-6'>
-                Place SVG here
+                {/*Place SVG here, maybe, oneday ...*/}
+                <span className="font-semibold text-xl tracking-tight">Knowledge Deposit</span>
+            </div>
+            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div className="text-sm lg:flex-grow">
+                    {navList}
+                </div>
             </div>
         </nav>
     )
 
 }
+
+export default Header;
 
 // <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
 //   <div class="flex items-center flex-shrink-0 text-white mr-6">
