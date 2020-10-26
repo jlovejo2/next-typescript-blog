@@ -46,7 +46,7 @@ const Header = (): JSX.Element => {
             </div>
         </nav>
     )
-
+    
 }
 
 export default Header;

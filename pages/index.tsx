@@ -4,7 +4,9 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import Header from "../components/header";
 import { GetStaticProps } from "next";
+import { Fragment } from "react";
 
 interface Props {
   allPostsData: {
@@ -16,6 +18,8 @@ interface Props {
 
 export default function Home({ allPostsData }: Props) {
   return (
+    <Fragment>
+    <Header />
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
@@ -44,6 +48,7 @@ export default function Home({ allPostsData }: Props) {
         </ul>
       </section>
     </Layout>
+    </Fragment>
   );
 }
 
